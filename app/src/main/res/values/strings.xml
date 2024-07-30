@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Pill Remainder</string>
+    <string name="spinner">Dosis Schedule</string>
+    <string name="hours">hours</string>
+    <string name="next">Next</string>
+    <string name="frecuency">Frecuency</string>
+    <string name="time">time</string>
+    <string name="start_time">Start time</string>
+    <string name="reminders">Reminders</string>
+    <string name="done">Done</string>
+    <string-array name="txtSchedule">
+        <item>4</item>
+        <item>8</item>
+        <item>12</item>
+
+    </string-array>
+</resources>

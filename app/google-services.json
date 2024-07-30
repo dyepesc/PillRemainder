@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "832590847682",
+    "project_id": "pill-remainder-34c71",
+    "storage_bucket": "pill-remainder-34c71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832590847682:android:40b2cd230aa49d9207255b",
+        "android_client_info": {
+          "package_name": "com.example.pillremainder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSjIG5HNkY9rfAtjF0s8UhnEoBGic0KNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

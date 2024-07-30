@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PillRemainder" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/greenMain</item>
+        <item name="backgroundColor">@color/BackGround</item>
+<!--         <item name="colorPrimary">@color/design_default_color_primary</item>-->
+    </style>
+
+    <style name="Theme.PillRemainder" parent="Base.Theme.PillRemainder" />
+</resources>

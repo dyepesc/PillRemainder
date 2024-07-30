@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="greenH1">#86C231</color>
+    <color name="greenH2">#A4DA3D</color>
+    <color name="greenMain">#67B779</color>
+    <color name="greenBTN">#C7E8CF</color>
+    <color name="navBar">#8F8A8A</color>
+    <color name="inputForm">#C5BEBE</color>
+    <color name="hint">#C5BEBE</color>
+    <color name="BackGround">#FFFFFF</color>
+    <color name="btnText">#FFFFFF</color>
+</resources>
