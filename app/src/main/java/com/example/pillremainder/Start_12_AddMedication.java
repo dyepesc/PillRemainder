@@ -105,7 +105,7 @@ public class Start_12_AddMedication extends AppCompatActivity
         }
     //------------------------------------------------------------------------
     //Method to go to a different activity-------------------------------------
-    private void goToSelectAuth() {
+    private void goToSelectSchedule() {
         Intent intent = new Intent(Start_12_AddMedication.this, Schedule_2.class);
         startActivity(intent);
     }
@@ -133,7 +133,7 @@ public class Start_12_AddMedication extends AppCompatActivity
 
         if(id == R.id.btnNext)
         {
-            goToSelectAuth();
+            goToSelectSchedule();
         }
     }
 }

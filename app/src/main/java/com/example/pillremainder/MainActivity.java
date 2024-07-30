@@ -24,19 +24,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                goToSelectAuth();
+                goToAddMedication();
             }
         });
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                goToSelectAuth2();
+                goToSignUp();
             }
         });
     }
 
-    private void goToSelectAuth2() {
+    private void goToSignUp() {
         Intent intent = new Intent(MainActivity.this, Start_11_SignUp.class);
         startActivity(intent);
     }
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     //this is only for test, don forget delete (Backdoor)
-    private void goToSelectAuth() {
+    private void goToAddMedication() {
         Intent intent = new Intent(MainActivity.this, Start_12_AddMedication.class);
         startActivity(intent);
     }

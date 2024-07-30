@@ -3,6 +3,7 @@ package com.example.pillremainder.models;
 public class User {
     String id;
     String name;
+    String lastName;
     String email;
 
     public User() {
@@ -28,6 +29,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {

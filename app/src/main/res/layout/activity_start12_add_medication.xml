@@ -52,7 +52,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/img_2" />
+                app:srcCompat="@drawable/img_2"
+                tools:ignore="SpeakableTextPresentCheck"/>
 
             <ImageButton
                 android:id="@+id/imageView3"
@@ -92,7 +93,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/img_6" />
+                app:srcCompat="@drawable/img_6"
+                tools:ignore="SpeakableTextPresentCheck"/>
 
             <ImageButton
                 android:id="@+id/imageView5"
@@ -105,7 +107,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/img_5" />
+                app:srcCompat="@drawable/img_5"
+                tools:ignore="SpeakableTextPresentCheck"/>
 
         </LinearLayout>
 
@@ -127,7 +130,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Name"
-                    android:inputType="textLongMessage">
+                    android:inputType="textLongMessage"
+                    tools:ignore="TouchTargetSizeCheck">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -149,11 +153,40 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputLastName"
+                    android:id="@+id/textInputDose"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Single dose, e.g. 1 tablet"
-                    android:inputType="textLongMessage">
+                    android:inputType="textLongMessage"
+                    tools:ignore="TouchTargetSizeCheck">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Total Pills"
+                    android:inputType="number"
+                    tools:ignore="TouchTargetSizeCheck">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -188,11 +221,12 @@
                 android:entries="@array/txtSchedule"
                 android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
             <TextView
                 android:id="@+id/hour"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="1dp"
+                android:layout_marginStart="1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hours"

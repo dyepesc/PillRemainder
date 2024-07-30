@@ -90,7 +90,7 @@ public class Start_11_SignUp extends AppCompatActivity {
                         if (task.isSuccessful())
                         {
                             String id = myAuth.getCurrentUser().getUid();
-                            saveUser(id, name, email);
+                            saveUser(id, name, lastName,email);
                         }
                         else {
                             Toast.makeText(Start_11_SignUp.this, "The user can not register", Toast.LENGTH_SHORT).show();
@@ -107,9 +107,10 @@ public class Start_11_SignUp extends AppCompatActivity {
         }
     }
 
-    private void saveUser(String id, String name, String email) {
+    private void saveUser(String id, String name, String lastName, String email) {
         User user = new User();
         user.setName(name);
+        user.setLastName(lastName);
         user.setEmail(email);
         myDatabase.child("Users").push().setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -117,7 +118,7 @@ public class Start_11_SignUp extends AppCompatActivity {
                 if (task.isSuccessful())
                 {
                     Toast.makeText(Start_11_SignUp.this, "User saved", Toast.LENGTH_SHORT).show();
-                    goToSelectAuth();
+                    goToAddMedication();
                 }
                 else {
                     Toast.makeText(Start_11_SignUp.this, "User can not saved", Toast.LENGTH_SHORT).show();
@@ -126,7 +127,7 @@ public class Start_11_SignUp extends AppCompatActivity {
         });
     }
 
-    private void goToSelectAuth() {
+    private void goToAddMedication() {
         Intent intent = new Intent(Start_11_SignUp.this, Start_12_AddMedication.class);
         startActivity(intent);
     }
