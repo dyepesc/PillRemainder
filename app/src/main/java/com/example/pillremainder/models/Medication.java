@@ -7,17 +7,19 @@ public class Medication{
     String dose;
     String pillTotal;
     String frequency;
+    String startTime;
 
     public Medication() {
     }
 
-    public Medication(String medType, String pillName, String dose, String pillTotal, String frequency) {
+    public Medication(String medType, String pillName, String dose, String pillTotal, String frequency, String startTime) {
 
         this.medType = medType;
         this.pillName = pillName;
         this.dose = dose;
         this.pillTotal = pillTotal;
         this.frequency = frequency;
+        this.startTime = startTime;
     }
 
     public String getMedType() {
@@ -59,4 +61,8 @@ public class Medication{
     public void setFrequency(String frequency) {
         this.frequency = frequency;
     }
+
+    public String getStartTime() { return startTime; }
+
+    public void setStartTime(String startTime) { this.startTime = startTime; }
 }
