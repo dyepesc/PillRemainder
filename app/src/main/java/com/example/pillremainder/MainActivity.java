@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                goToAddMedication();
+                goToSelectAuth();
             }
         });
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     //this is only for test, don forget delete (Backdoor)
-    private void goToAddMedication() {
+    private void goToSelectAuth() {
         Intent intent = new Intent(MainActivity.this, Start_12_AddMedication.class);
         startActivity(intent);
     }

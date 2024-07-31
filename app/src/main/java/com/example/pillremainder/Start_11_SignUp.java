@@ -73,11 +73,11 @@ public class Start_11_SignUp extends AppCompatActivity {
     }
 
     private void registerUser() {
-        String name = myTextInputName.getText().toString();
-        String lastName = myTextInputLastName.getText().toString();
-        String date = myTextInputDate.getText().toString();
-        String email = myTextInputEmail.getText().toString();
-        String password = myTextInputPass.getText().toString();
+        final String name = myTextInputName.getText().toString();
+        final String lastName = myTextInputLastName.getText().toString();
+        final String date = myTextInputDate.getText().toString();
+        final String email = myTextInputEmail.getText().toString();
+        final String password = myTextInputPass.getText().toString();
 
         if(!name.isEmpty() && !lastName.isEmpty() && !date.isEmpty() && !email.isEmpty() && !password.isEmpty())
         {
@@ -113,7 +113,7 @@ public class Start_11_SignUp extends AppCompatActivity {
         user.setName(name);
         user.setLastName(lastName);
         user.setEmail(email);
-        myDatabase.child("Users").push().setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+        myDatabase.child("Users").child(id).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful())

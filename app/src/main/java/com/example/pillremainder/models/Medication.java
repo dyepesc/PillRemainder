@@ -1,16 +1,17 @@
 package com.example.pillremainder.models;
 
 public class Medication{
+
     String medType;
     String pillName;
     String dose;
-    int pillTotal;
-    int frequency;
+    String pillTotal;
+    String frequency;
 
     public Medication() {
     }
 
-    public Medication(String medType, String pillName, String dose, int pillTotal, int frequency) {
+    public Medication(String medType, String pillName, String dose, String pillTotal, String frequency) {
 
         this.medType = medType;
         this.pillName = pillName;
@@ -43,19 +44,19 @@ public class Medication{
         this.dose = dose;
     }
 
-    public int getPillTotal() {
+    public String getPillTotal() {
         return pillTotal;
     }
 
-    public void setPillTotal(int pillTotal) {
+    public void setPillTotal(String pillTotal) {
         this.pillTotal = pillTotal;
     }
 
-    public int getFrequency() {
+    public String getFrequency() {
         return frequency;
     }
 
-    public void setFrequency(int frequency) {
+    public void setFrequency(String frequency) {
         this.frequency = frequency;
     }
 }

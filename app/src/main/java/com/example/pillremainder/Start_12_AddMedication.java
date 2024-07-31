@@ -1,5 +1,6 @@
 package com.example.pillremainder;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,10 +11,24 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.example.pillremainder.models.Medication;
+import com.example.pillremainder.models.User;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.security.AuthProvider;
 
 public class Start_12_AddMedication extends AppCompatActivity
                                     implements View.OnClickListener {
+
+    AuthProvider mAuthProvider;
+    Medication myMedication;
+    AlertDialog mDialog;
+    DatabaseReference mDatabase;
+
+    public Start_12_AddMedication() {
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Medications");
+    }
 
     //declare variables-------------------------------------------------------
     ImageButton btnImg2;
@@ -40,6 +55,7 @@ public class Start_12_AddMedication extends AppCompatActivity
     int resID5_2 = R.drawable.img_5_2;
     int resID6 = R.drawable.img_6;
     int resID6_2 = R.drawable.img_6_2;
+    String stringImage;
     //------------------------------------------------------------------------
 
     //creating the variables for every ImageButton and inputText---------------
@@ -71,30 +87,30 @@ public class Start_12_AddMedication extends AppCompatActivity
     //Method to call the ImageButton when is clicked 2------------------------
     private void clickBtn(ImageButton imageButton, int resID1, int resID2) {
 
-            imageButton.setImageResource(resID2);
+        imageButton.setImageResource(resID2);
 
-            if(imageButton == btnImg2) {
-                btnImg3.setImageResource(R.drawable.img_3);
-                btnImg4.setImageResource(R.drawable.img_6);
-                btnImg5.setImageResource(R.drawable.img_5);
-            }
-            else if(imageButton == btnImg3) {
-                btnImg2.setImageResource(R.drawable.img_2);
-                btnImg4.setImageResource(R.drawable.img_6);
-                btnImg5.setImageResource(R.drawable.img_5);
-            }
-            else if(imageButton == btnImg4) {
-                btnImg3.setImageResource(R.drawable.img_3);
-                btnImg2.setImageResource(R.drawable.img_2);
-                btnImg5.setImageResource(R.drawable.img_5);
-            }
-            else if(imageButton == btnImg5) {
-                btnImg3.setImageResource(R.drawable.img_3);
-                btnImg4.setImageResource(R.drawable.img_6);
-                btnImg2.setImageResource(R.drawable.img_2);
-            }
-
+        if(imageButton == btnImg2) {
+            btnImg3.setImageResource(R.drawable.img_3);
+            btnImg4.setImageResource(R.drawable.img_6);
+            btnImg5.setImageResource(R.drawable.img_5);
         }
+        else if(imageButton == btnImg3) {
+            btnImg2.setImageResource(R.drawable.img_2);
+            btnImg4.setImageResource(R.drawable.img_6);
+            btnImg5.setImageResource(R.drawable.img_5);
+        }
+        else if(imageButton == btnImg4) {
+            btnImg3.setImageResource(R.drawable.img_3);
+            btnImg2.setImageResource(R.drawable.img_2);
+            btnImg5.setImageResource(R.drawable.img_5);
+        }
+        else if(imageButton == btnImg5) {
+            btnImg3.setImageResource(R.drawable.img_3);
+            btnImg4.setImageResource(R.drawable.img_6);
+            btnImg2.setImageResource(R.drawable.img_2);
+        }
+
+    }
     //------------------------------------------------------------------------
 
     //Method to call the ImageButton when is clicked 1------------------------
@@ -121,20 +137,28 @@ public class Start_12_AddMedication extends AppCompatActivity
 
         if(id == R.id.btnNext)
         {
-
             goToSelectSchedule();
         }
     }
     //-------------------------------------------------------------------------
 
     //Method to go save User medication----------------------------------------
-//    private void saveUserMedication(ImageButton imageButton) {
+    private void saveUserMedication(String medType, String pillName, String dose, String pillTotal, String frequency) {
+        Medication medication = new Medication();
+        medication.setMedType(medType);
+        medication.setPillName(pillName);
+        medication.setDose(dose);
+        medication.setPillTotal(pillTotal);
+        medication.setFrequency(frequency);
+
 //        String medType = imageButton.setImageResource(R.drawable.img_2);
 //        String medType = imageButton.getText().toString();
 //        String pillName = txtInputPillName.getText().toString();
 //        String dose = txtInputPillDose.getText().toString();
 //        String pillTotal = txtInputPillTotal.getText().toString();  //it is an int
 //        String frequency = intInputPillFrequency.getSelectedItem().toString();   //it is a spinner
+    }
+
 
 
 
