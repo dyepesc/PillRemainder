@@ -24,11 +24,12 @@ import dmax.dialog.SpotsDialog;
 
 public class Start_11_SignUp extends AppCompatActivity {
 
+    //declare variables-------------------------------------------------------
     Toolbar toolbar_SignUp;     // this is the navBar in the top of the page
     FirebaseAuth myAuth;  //to send user info to firebase database
     DatabaseReference myDatabase;
 
-    //Views
+    //Views-------------------------------------------------------------------
     Button myButonSignUp;
     TextInputEditText myTextInputName;
     TextInputEditText myTextInputLastName;
@@ -37,7 +38,7 @@ public class Start_11_SignUp extends AppCompatActivity {
     TextInputEditText myTextInputPass;
 
     AlertDialog myDialog;
-
+    //------------------------------------------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -7,18 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Spinner;
+
+import com.example.pillremainder.models.Medication;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class Start_12_AddMedication extends AppCompatActivity
                                     implements View.OnClickListener {
 
     //declare variables-------------------------------------------------------
-    private ImageButton btnImg2;
-    private ImageButton btnImg3;
-    private ImageButton btnImg4;
-    private ImageButton btnImg5;
+    ImageButton btnImg2;
+    ImageButton btnImg3;
+    ImageButton btnImg4;
+    ImageButton btnImg5;
     private Button btnNext;
+    private TextInputEditText txtInputPillName;
+    TextInputEditText txtInputPillDose;
+    private TextInputEditText txtInputPillTotal;
+    private Spinner intInputPillFrequency;
 
-    public boolean isImage2 = true;
+
     //------------------------------------------------------------------------
 
     //creating the id variables for every ImageButton-------------------------
@@ -34,17 +42,21 @@ public class Start_12_AddMedication extends AppCompatActivity
     int resID6_2 = R.drawable.img_6_2;
     //------------------------------------------------------------------------
 
-    //creating thevariables for every ImageButton-----------------------------
+    //creating the variables for every ImageButton and inputText---------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start12_add_medication);
 
-        btnImg2 = findViewById(R.id.imageView2);
-        btnImg3 = findViewById(R.id.imageView3);
-        btnImg4 = findViewById(R.id.imageView4);
-        btnImg5 = findViewById(R.id.imageView5);
+        btnImg2 = findViewById(R.id.Pills);
+        btnImg3 = findViewById(R.id.Capsules);
+        btnImg4 = findViewById(R.id.Syrup);
+        btnImg5 = findViewById(R.id.Inhaler);
         btnNext = findViewById(R.id.btnNext);
+        txtInputPillName = findViewById(R.id.textInputMed);
+        txtInputPillDose = findViewById(R.id.textInputDose);
+        txtInputPillTotal = findViewById(R.id.textInputTotal);
+//        intInputPillFrequency = findViewById(R.id.spinnerDose);
     //------------------------------------------------------------------------
 
     //Set the listener--------------------------------------------------------
@@ -55,32 +67,11 @@ public class Start_12_AddMedication extends AppCompatActivity
         btnNext.setOnClickListener(this);
     //------------------------------------------------------------------------
 
-    //Method to call the button when is clicked----Original and working
-
-//        btnImg2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (isImage2) {
-//                    btnImg2.setImageResource(R.drawable.img_2_2);
-//                } else {
-//                    btnImg2.setImageResource(R.drawable.img_2);
-//                }
-//                isImage2 = !isImage2;
-//            }
-//        });
-
     }
-    //Method to call the ImageButton when is clicked-------------------------
+    //Method to call the ImageButton when is clicked 2------------------------
     private void clickBtn(ImageButton imageButton, int resID1, int resID2) {
 
             imageButton.setImageResource(resID2);
-
-//        if (isImage2) {
-//            imageButton.setImageResource(resID1);
-//        } else {
-//            imageButton.setImageResource(resID2);
-//        }
-//        isImage2 = !isImage2;
 
             if(imageButton == btnImg2) {
                 btnImg3.setImageResource(R.drawable.img_3);
@@ -102,38 +93,70 @@ public class Start_12_AddMedication extends AppCompatActivity
                 btnImg4.setImageResource(R.drawable.img_6);
                 btnImg2.setImageResource(R.drawable.img_2);
             }
+
         }
     //------------------------------------------------------------------------
-    //Method to go to a different activity-------------------------------------
-    private void goToSelectSchedule() {
-        Intent intent = new Intent(Start_12_AddMedication.this, Schedule_2.class);
-        startActivity(intent);
-    }
-    //------------------------------------------------------------------------
+
+    //Method to call the ImageButton when is clicked 1------------------------
     @Override
     public void onClick(View v) {
         int id = v.getId();
 
-        if (id == R.id.imageView2)
+        if (id == R.id.Pills)
         {
             clickBtn(btnImg2, resID2, resID2_2);
         }
-        else if (id == R.id.imageView3)
+        else if (id == R.id.Capsules)
         {
             clickBtn(btnImg3, resID3, resID3_2);
         }
-        else if (id == R.id.imageView4)
+        else if (id == R.id.Syrup)
         {
             clickBtn(btnImg4, resID6, resID6_2);
         }
-        else if (id == R.id.imageView5)
+        else if (id == R.id.Inhaler)
         {
             clickBtn(btnImg5, resID5, resID5_2);
         }
 
         if(id == R.id.btnNext)
         {
+
             goToSelectSchedule();
         }
     }
+    //-------------------------------------------------------------------------
+
+    //Method to go save User medication----------------------------------------
+//    private void saveUserMedication(ImageButton imageButton) {
+//        String medType = imageButton.setImageResource(R.drawable.img_2);
+//        String medType = imageButton.getText().toString();
+//        String pillName = txtInputPillName.getText().toString();
+//        String dose = txtInputPillDose.getText().toString();
+//        String pillTotal = txtInputPillTotal.getText().toString();  //it is an int
+//        String frequency = intInputPillFrequency.getSelectedItem().toString();   //it is a spinner
+
+
+
+        //creating Object Medication----------------------------------------------
+//        Medication medication = new Medication();
+//        Medication medication = new Medication(String medType, String pillName, String dose, String pillTotal, String frequency) {
+//
+//            this.medType = medType;
+//            this.pillName = pillName;
+//            this.dose = dose;
+//            this.pillTotal = pillTotal;
+//            this.frequency = frequency;
+//        }
+
+
+
+//    }
+    //-------------------------------------------------------------------------
+    //Method to go to a different activity-------------------------------------
+    private void goToSelectSchedule() {
+        Intent intent = new Intent(Start_12_AddMedication.this, Schedule_2.class);
+        startActivity(intent);
+    }
+    //------------------------------------------------------------------------
 }
