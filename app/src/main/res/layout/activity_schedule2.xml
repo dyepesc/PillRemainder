@@ -42,7 +42,7 @@
             android:layout_margin="0dp">
 
             <ImageButton
-                android:id="@+id/imageView3"
+                android:id="@+id/imagePill"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="20dp"
@@ -82,7 +82,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dosse 1"
+                android:text="Dose 1"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 />
@@ -90,6 +90,156 @@
 
             <TextView
                 android:id="@+id/hour"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/pillSchedule2"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dose 2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/hour2"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/pillSchedule3"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dose 3"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/hour3"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/pillSchedule4"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dose 4"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/hour4"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/pillSchedule5"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dose 5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/hour5"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/pillSchedule6"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dose 6"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/hour6"
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="80dp"
                 android:layout_width="wrap_content"

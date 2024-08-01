@@ -27,6 +27,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import dmax.dialog.SpotsDialog;
+
 public class Start_12_AddMedication extends AppCompatActivity
                                     implements View.OnClickListener {
     //firebase database-------------------------------------------------------
@@ -139,7 +141,7 @@ public class Start_12_AddMedication extends AppCompatActivity
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, hour);
         calendar.set(Calendar.MINUTE, minute);
-        SimpleDateFormat sdf = new SimpleDateFormat("H:mm a", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("h:mm a", Locale.getDefault());
 
         String timeStart = sdf.format(calendar.getTime());
     //------------------------------------------------------------------------
@@ -206,6 +208,9 @@ public class Start_12_AddMedication extends AppCompatActivity
     //-------------------------------------------------------------------------
     //Method to go to a different activity-------------------------------------
     private void goToSelectSchedule() {
+        android.app.AlertDialog myDialog;
+        myDialog = new SpotsDialog.Builder().setContext(Start_12_AddMedication.this).setMessage("Please wait...").build();
+        myDialog.show();
         Intent intent = new Intent(Start_12_AddMedication.this, Schedule_2.class);
         startActivity(intent);
     }
