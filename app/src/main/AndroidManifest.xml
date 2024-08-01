@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PillRemainder"
         tools:targetApi="31">
         <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
             android:name=".Schedule_2"
             android:exported="false" />
         <activity

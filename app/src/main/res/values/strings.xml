@@ -8,6 +8,8 @@
     <string name="start_time">Start time</string>
     <string name="reminders">Reminders</string>
     <string name="done">Done</string>
+    <string name="schedule">Schedule</string>
+    <string name="log_out">Log Out</string>
     <string-array name="txtSchedule">
         <item>4</item>
         <item>6</item>
