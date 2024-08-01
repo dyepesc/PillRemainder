@@ -79,7 +79,8 @@ public class Start_20_Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful())
                         {
-                            Toast.makeText(Start_20_Login.this, "Log In Succesful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Start_20_Login.this, "Log In Successful", Toast.LENGTH_SHORT).show();
+                            goToHome();
                         }
                         else {
                             Toast.makeText(Start_20_Login.this, "email or password are not correct", Toast.LENGTH_SHORT).show();
@@ -97,10 +98,10 @@ public class Start_20_Login extends AppCompatActivity {
         }
     }
 
-//    private void goToSelectAuth() {
-//        Intent intent = new Intent(Start_11_SignUp.this, Start_12_AddMedication.class);
-//        startActivity(intent);
-//    }
+    private void goToHome() {
+        Intent intent = new Intent(Start_20_Login.this, Home.class);
+        startActivity(intent);
+    }
 
 
 }

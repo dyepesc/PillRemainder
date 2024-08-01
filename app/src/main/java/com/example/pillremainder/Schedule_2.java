@@ -3,6 +3,7 @@ package com.example.pillremainder;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+
+import dmax.dialog.SpotsDialog;
 
 public class Schedule_2 extends AppCompatActivity
         implements View.OnClickListener {
@@ -231,9 +234,21 @@ public class Schedule_2 extends AppCompatActivity
         //------------------------------------------------------------------------
     }
 
+    //Method activate buttons-------------------------------------
     @Override
     public void onClick(View view) {
-
+        goToHome();
     }
+    //------------------------------------------------------------------------
+
+    //Method to go to a different activity-------------------------------------
+    private void goToHome() {
+        android.app.AlertDialog myDialog;
+        myDialog = new SpotsDialog.Builder().setContext(Schedule_2.this).setMessage("Please wait...").build();
+        myDialog.show();
+        Intent intent = new Intent(Schedule_2.this, Home.class);
+        startActivity(intent);
+    }
+    //------------------------------------------------------------------------
 
 }
