@@ -219,12 +219,14 @@ public class Schedule_2 extends AppCompatActivity
                         txtDose6.setText("");
                     }
                 }
+                else {
+                    Toast.makeText(Schedule_2.this, "Database Error:", Toast.LENGTH_SHORT).show();
+                }
             }
         //------------------------------------------------------------------------
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
-                Toast.makeText(Schedule_2.this, "Database Error:", Toast.LENGTH_SHORT).show();
             }
         });
         //-----------------------------------------------------------------------
@@ -243,10 +245,11 @@ public class Schedule_2 extends AppCompatActivity
 
     //Method to go to a different activity-------------------------------------
     private void goToHome() {
-        android.app.AlertDialog myDialog;
-        myDialog = new SpotsDialog.Builder().setContext(Schedule_2.this).setMessage("Please wait...").build();
-        myDialog.show();
+//        android.app.AlertDialog myDialog;
+//        myDialog = new SpotsDialog.Builder().setContext(Schedule_2.this).setMessage("Please wait...").build();
+//        myDialog.show();
         Intent intent = new Intent(Schedule_2.this, Home.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
     //------------------------------------------------------------------------

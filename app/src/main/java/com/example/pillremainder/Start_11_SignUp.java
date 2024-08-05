@@ -130,6 +130,7 @@ public class Start_11_SignUp extends AppCompatActivity {
 
     private void goToAddMedication() {
         Intent intent = new Intent(Start_11_SignUp.this, Start_12_AddMedication.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }

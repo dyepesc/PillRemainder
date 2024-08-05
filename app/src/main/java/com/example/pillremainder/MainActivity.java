@@ -3,14 +3,18 @@ package com.example.pillremainder;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnLogin;
     Button btnSignUp;
+    SharedPreferences mPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void goToSignUp() {
         Intent intent = new Intent(MainActivity.this, Start_11_SignUp.class);

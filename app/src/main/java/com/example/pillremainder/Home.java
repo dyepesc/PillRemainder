@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,6 +51,7 @@ public class Home extends AppCompatActivity
     Button btnSchedule;
     Button btnEdit;
     Button btnLogOut;
+    SharedPreferences mPref;
     //------------------------------------------------------------------------
     //Declare variables-------------------------------------------------------
     String medType;
@@ -116,12 +118,14 @@ public class Home extends AppCompatActivity
                         imageButton.setImageResource(R.drawable.img_5);
                     }
                 }
+                else {
+                    Toast.makeText(Home.this, "Database Error:", Toast.LENGTH_SHORT).show();
+                }
             }
             //------------------------------------------------------------------------
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
-                Toast.makeText(Home.this, "Database Error:", Toast.LENGTH_SHORT).show();
             }
         });
         //-----------------------------------------------------------------------
@@ -133,14 +137,16 @@ public class Home extends AppCompatActivity
 
                 if(dataSnapshot.exists()){
                     userName = dataSnapshot.child("name").getValue(String.class);
-                    txtUserName.setText(userName);
+                    txtUserName.setText("Hello "+userName+"!");
+                }
+                else {
+                    Toast.makeText(Home.this, "Database Error:", Toast.LENGTH_SHORT).show();
                 }
             }
             //------------------------------------------------------------------------
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
-                Toast.makeText(Home.this, "Database Error:", Toast.LENGTH_SHORT).show();
             }
         });
         //-----------------------------------------------------------------------
@@ -171,9 +177,9 @@ public class Home extends AppCompatActivity
 
     //Method to go to a different activity-------------------------------------
     private void goToSchedule() {
-        android.app.AlertDialog myDialog;
-        myDialog = new SpotsDialog.Builder().setContext(Home.this).setMessage("Please wait...").build();
-        myDialog.show();
+//        android.app.AlertDialog myDialog;
+//        myDialog = new SpotsDialog.Builder().setContext(Home.this).setMessage("Please wait...").build();
+//        myDialog.show();
         Intent intent = new Intent(Home.this, Schedule_2.class);
         startActivity(intent);
     }
@@ -181,9 +187,9 @@ public class Home extends AppCompatActivity
 
     //Method to go to a different activity-------------------------------------
     private void goToAddMedications() {
-        android.app.AlertDialog myDialog;
-        myDialog = new SpotsDialog.Builder().setContext(Home.this).setMessage("Please wait...").build();
-        myDialog.show();
+//        android.app.AlertDialog myDialog;
+//        myDialog = new SpotsDialog.Builder().setContext(Home.this).setMessage("Please wait...").build();
+//        myDialog.show();
         Intent intent = new Intent(Home.this, Start_12_AddMedication.class);
         startActivity(intent);
     }

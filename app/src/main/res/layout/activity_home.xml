@@ -129,7 +129,7 @@
             <TextView
                 android:id="@+id/hour"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hours"

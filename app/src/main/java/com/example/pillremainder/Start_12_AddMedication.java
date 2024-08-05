@@ -212,6 +212,7 @@ public class Start_12_AddMedication extends AppCompatActivity
         myDialog = new SpotsDialog.Builder().setContext(Start_12_AddMedication.this).setMessage("Please wait...").build();
         myDialog.show();
         Intent intent = new Intent(Start_12_AddMedication.this, Schedule_2.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
     //------------------------------------------------------------------------

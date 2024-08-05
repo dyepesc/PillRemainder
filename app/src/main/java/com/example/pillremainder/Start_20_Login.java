@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,8 @@ public class Start_20_Login extends AppCompatActivity {
     DatabaseReference myDatabase;
 
     AlertDialog myDialog;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,8 +101,11 @@ public class Start_20_Login extends AppCompatActivity {
         }
     }
 
+
+
     private void goToHome() {
         Intent intent = new Intent(Start_20_Login.this, Home.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
