@@ -84,7 +84,7 @@ public class Schedule_2 extends AppCompatActivity
         txtHour5 = findViewById(R.id.hour5);
         txtHour6 = findViewById(R.id.hour6);
 
-        txtSwitch = findViewById(R.id.mySwitch);
+
         btnDone = findViewById(R.id.btnDone);
         //------------------------------------------------------------------------
 
